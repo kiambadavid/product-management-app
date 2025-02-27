@@ -8,8 +8,9 @@ This project provides a robust, scalable solution for managing products. It leve
 ## Installation
 1. Ensure Node.js is installed on your system.
 2. Install required packages by running: `npm install` (ensure the package.json matches these dependencies).
-3. Start the application using: `node run dev`
-4. Check [knex for Database configuration](https://knexjs.org/guide/)
+3. Start the application using: `node run dev`.
+4. Check [knex for Database configuration](https://knexjs.org/guide/).
+5. Configure your environment (.env) appropriately.
 
 ## Features
 - Product listing with pagination
