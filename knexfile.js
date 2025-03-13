@@ -19,33 +19,41 @@ module.exports = {
   },
 
   staging: {
-    client: "postgresql",
+    client: "pg",
     connection: {
-      database: "PMstore",
-      user: "postgres",
-      password: "!1",
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+      timezone: process.env.DB_TIMEZONE,
+      port: process.env.DB_PORT,
     },
     pool: {
       min: 2,
       max: 10,
     },
     migrations: {
+      directory: "./migrations",
       tableName: "knex_migrations",
     },
   },
 
   production: {
-    client: "postgresql",
+    client: "pg",
     connection: {
-      database: "PMstore",
-      user: "postgres",
-      password: "!1",
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+      timezone: process.env.DB_TIMEZONE,
+      port: process.env.DB_PORT,
     },
     pool: {
       min: 2,
       max: 10,
     },
     migrations: {
+      directory: "./migrations",
       tableName: "knex_migrations",
     },
   },
